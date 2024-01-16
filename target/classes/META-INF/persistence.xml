@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+  <persistence-unit name="collegePersistenceUnit">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.example.tema2_servlet.database.model.PersonEntity</class>
+    <class>com.example.tema2_servlet.database.model.PersonAccountEntity</class>
+    <class>com.example.tema2_servlet.database.model.CourseInfo</class>
+    <class>com.example.tema2_servlet.database.model.CourseEntity</class>
+    <class>com.example.tema2_servlet.database.model.GradeEntity</class>
+
+    <properties>
+
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/tw2"/>
+      <!-- Change driver if needed -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+      <property name="jakarta.persistence.jdbc.password" value="7777"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+      <property name="eclipselink.logging.level" value="INFO"/>
+      <property name="eclipselink.jpa.uppercase-column-names" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>
